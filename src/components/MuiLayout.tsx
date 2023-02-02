@@ -1,7 +1,8 @@
-import {Box, Stack, Divider} from "@mui/material"
+import {Box, Stack, Divider, Grid} from "@mui/material"
 
 export const MuiLayout = () => {
   return (
+    <>
     <Stack sx={{ border: "1px solid" }} direction="row" spacing={2} divider={<Divider orientation="vertical" flexItem/>}>
     <Box 
         sx={{
@@ -25,6 +26,20 @@ export const MuiLayout = () => {
         p={2}
     ></Box>
     </Stack>
-
+    <Grid container my={4} rowSpacing={2} columnSpacing={1}>
+        <Grid item xs={6} >
+            <Box bgcolor="primary.light" p={2}>Item 1</Box>
+        </Grid>
+        <Grid item xs="auto" >
+            <Box bgcolor="primary.light" p={2}>Item 2</Box>
+        </Grid>
+        <Grid item xs={6} >
+            <Box bgcolor="primary.light" p={2}>Item 3</Box>
+        </Grid>
+        <Grid item xs={6} >
+            <Box bgcolor="primary.light" p={2}>Item 4</Box>
+        </Grid>
+    </Grid>
+    </>
   )
 }
